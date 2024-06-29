@@ -1,13 +1,18 @@
 package com.example.bmi_calculator;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.window.OnBackInvokedDispatcher;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         EditText age = (EditText) findViewById(R.id.age_input);
         EditText height = (EditText) findViewById(R.id.height_input);
         EditText weight = (EditText) findViewById(R.id.weight_input);
-
 
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,5 +59,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Do you really want to exit?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }
