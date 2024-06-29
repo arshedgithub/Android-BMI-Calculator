@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="BMI Caluclator - results"
+        android:text="BMI Caluclator - Results"
         android:textSize="30sp"
         android:padding="25sp"
         android:background="@color/blue"

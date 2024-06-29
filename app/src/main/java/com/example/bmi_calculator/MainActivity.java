@@ -46,13 +46,12 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (ageValue == 0 || heightValue == 0.0 || weightValue == 0.0){
-                    Toast.makeText(getApplicationContext(), "Invalid value", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Invalid values", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 float heightInM = heightValue/100;
                 float bmiValue = weightValue / (heightInM * heightInM);
-                Toast.makeText(getApplicationContext(), String.valueOf(bmiValue), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getBaseContext(), ResultActivity.class);
                 intent.putExtra("bmi", bmiValue);
                 startActivity(intent);
