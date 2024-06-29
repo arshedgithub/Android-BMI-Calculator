@@ -66,14 +66,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setMessage("Do you really want to exit?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setTitle("Exit")
+                .setMessage("Do you want to exit from the App?")
+                .setPositiveButton("Exit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         finish();
                     }
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Cancel", null)
                 .show();
     }
 }
