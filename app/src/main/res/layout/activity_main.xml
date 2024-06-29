@@ -40,32 +40,84 @@
         android:orientation="vertical"
         android:padding="25sp" >
 
-        <EditText
-            android:id="@+id/age_input"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:hint="Age"
-            android:inputType="number"
-            tools:ignore="Suspicious0dp" />
+            android:weightSum="7"
+            android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/height_input"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:hint="Height"
-            android:inputType="numberDecimal"
-            tools:ignore="Suspicious0dp" />
+            <EditText
+                android:id="@+id/age_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:hint="Age"
+                android:inputType="number"
+                tools:ignore="Suspicious0dp" />
 
-        <EditText
-            android:id="@+id/weight_input"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                tools:ignore="Suspicious0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:hint="Weight"
-            android:inputType="numberDecimal"
-            tools:ignore="Suspicious0dp" />
+            android:weightSum="7"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/height_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:hint="Height"
+                android:inputType="numberDecimal"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="cm"
+                android:textSize="20sp"
+                android:paddingTop="20sp"
+                tools:ignore="Suspicious0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="7"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:hint="Weight"
+                android:inputType="numberDecimal"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="kg"
+                android:textSize="20sp"
+                android:paddingTop="20sp"
+                tools:ignore="Suspicious0dp" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_calc"
