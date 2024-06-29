@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:text="BMI Caluclator"
         android:textSize="30sp"
-        android:padding="20sp"
+        android:padding="25sp"
         android:background="@color/blue"
         tools:ignore="Suspicious0dp" />
 
@@ -41,33 +41,38 @@
         android:padding="25sp" >
 
         <EditText
+            android:id="@+id/age_input"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:hint="Age"
-            android:numeric="integer"
+            android:inputType="number"
             tools:ignore="Suspicious0dp" />
 
         <EditText
+            android:id="@+id/height_input"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:hint="Height"
-            android:numeric="decimal"
+            android:inputType="numberDecimal"
             tools:ignore="Suspicious0dp" />
 
         <EditText
+            android:id="@+id/weight_input"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:hint="Weight"
-            android:numeric="decimal"
+            android:inputType="numberDecimal"
             tools:ignore="Suspicious0dp" />
 
         <Button
+            android:id="@+id/btn_calc"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:textSize="25dp"
             android:text="CALCULATE"
             android:backgroundTint="@color/blue"
             tools:ignore="Suspicious0dp" />

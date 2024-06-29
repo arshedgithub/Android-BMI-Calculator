@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="BMI Caluclator"
+        android:textSize="30sp"
+        android:padding="25sp"
+        android:background="@color/blue"
+        tools:ignore="Suspicious0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:layout_weight="3" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:padding="25sp" >
+
+            <EditText
+                android:id="@+id/age_input"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="Age"
+                android:numeric="integer"
+                tools:ignore="Suspicious0dp" />
+
+            <EditText
+                android:id="@+id/height_input"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="Height"
+                android:numeric="decimal"
+                tools:ignore="Suspicious0dp" />
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:hint="Weight"
+                android:numeric="decimal"
+                tools:ignore="Suspicious0dp" />
+
+            <Button
+                android:id="@+id/btn_calc"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:text="CALCULATE"
+                android:backgroundTint="@color/blue"
+                tools:ignore="Suspicious0dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
