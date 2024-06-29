@@ -29,14 +29,19 @@ public class MainActivity extends AppCompatActivity {
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (age.getText().toString() == "" || height.getText().toString() == "" || weight.getText().toString() == ""){
-//                    Toast.makeText(getApplicationContext(), "Required Field Empty", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
+                if (age.getText().toString().matches("") || height.getText().toString().matches("") || weight.getText().toString().matches("")){
+                    Toast.makeText(getApplicationContext(), "Required Field Empty", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 int ageValue = Integer.parseInt(age.getText().toString());
                 float heightValue = Float.valueOf(height.getText().toString());
                 float weightValue = Float.valueOf(weight.getText().toString());
+
+                if (ageValue < 18){
+                    Toast.makeText(getApplicationContext(), "Age should be 18 or above", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (ageValue == 0 || heightValue == 0.0 || weightValue == 0.0){
                     Toast.makeText(getApplicationContext(), "Invalid value", Toast.LENGTH_SHORT).show();
@@ -44,10 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 float bmiValue = weightValue / (heightValue * heightValue);
-
                 Toast.makeText(getApplicationContext(), String.valueOf(bmiValue), Toast.LENGTH_SHORT).show();
 
-//
             }
         });
     }
